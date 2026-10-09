@@ -11,11 +11,12 @@ function escapeRe(s) {
 export function parsePrompt(prompt, keyword = 'vent') {
   if (typeof prompt !== 'string') return null;
   const trimmed = prompt.trim();
-  const re = new RegExp(`^/?${escapeRe(keyword)}(?::|(?=\\s)|$)\\s*`, 'i');
+  // A slash command may arrive namespaced, e.g. "/catharsis:vent ...".
+  const re = new RegExp(`^(?:/(?:[a-z0-9-]+:)?)?${escapeRe(keyword)}(:|(?=\\s)|$)\\s*`, 'i');
   const m = trimmed.match(re);
   if (!m) return null;
   const rest = trimmed.slice(m[0].length);
-  const usedColon = m[0].includes(':');
+  const usedColon = m[1] === ':';
 
   if (!usedColon) {
     const [first = '', ...others] = rest.split(/\s+/);

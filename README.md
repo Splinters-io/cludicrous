@@ -1,4 +1,4 @@
-# Token-less Catharsis (`vent`), a Claude Code plugin
+# Token-less Catharsis, a Claude Code plugin
 
 > **If Anthropic won't hear it, send it to the internet #cludicrous**
 
@@ -10,7 +10,7 @@ When Claude Code makes you angry enough to swear at it, that's a UX bug, and it 
 
 ```
 /plugin marketplace add Splinters-io/cludicrous
-/plugin install vent@vent-plugins
+/plugin install catharsis@vent-plugins
 ```
 
 Or for local development: `claude --plugin-dir /path/to/vent`

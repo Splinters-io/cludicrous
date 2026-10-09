@@ -7,7 +7,7 @@
   },
   "plugins": [
     {
-      "name": "vent",
+      "name": "catharsis",
       "source": "./",
       "description": "Token-less catharsis: vent about Claude Code in public, not at the model. Prompts starting with vent: or /vent are caught locally, never sent to the model, redacted, and shared to X, Bluesky, Mastodon, LinkedIn, Facebook or GitHub when you choose.",
       "category": "productivity",

@@ -22,6 +22,10 @@ test('parsePrompt: triggers only on a leading keyword', () => {
   assert.deepEqual(parsePrompt('vent: this is broken'), { cmd: 'draft', args: [], text: 'this is broken' });
   assert.equal(parsePrompt('VENT:  loud').cmd, 'draft');
   assert.equal(parsePrompt('/vent why').text, 'why');
+  assert.equal(parsePrompt('/catharsis:vent why').text, 'why');
+  assert.equal(parsePrompt('/catharsis:vent send x').cmd, 'send');
+  assert.equal(parsePrompt('/other-plugin:venting x'), null);
+  assert.equal(parsePrompt('catharsis:vent x'), null);
   assert.equal(parsePrompt('vent why does this suck').cmd, 'draft');
   assert.equal(parsePrompt('  vent: padded').text, 'padded');
   for (const p of ['prevent the crash', 'eventually fix it', 'please vent: no', 'venting is fine', 'ventilation', '']) {

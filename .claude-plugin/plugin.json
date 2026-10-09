@@ -1,6 +1,6 @@
 {
-  "name": "vent",
-  "version": "0.1.3",
+  "name": "catharsis",
+  "version": "0.2.0",
   "description": "Token-less catharsis: vent about Claude Code in public, not at the model. Prompts starting with vent: or /vent are caught locally, never sent to the model, redacted, and shared to X, Bluesky, Mastodon, LinkedIn, Facebook or GitHub when you choose.",
   "author": {
     "name": "carroll",
