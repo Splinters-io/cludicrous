@@ -1,0 +1,23 @@
+{
+  "name": "vent-plugins",
+  "description": "If Anthropic won't hear it, send it to the internet #cludicrous",
+  "owner": {
+    "name": "carroll",
+    "email": "carroll@splinters.io"
+  },
+  "plugins": [
+    {
+      "name": "vent",
+      "source": "./",
+      "description": "If Anthropic won't hear it, send it to the internet #cludicrous. Prompts starting with vent: are caught locally, never sent to the model, redacted, and shared to X, Bluesky, Mastodon, LinkedIn, Facebook or GitHub.",
+      "category": "productivity",
+      "tags": [
+        "feedback",
+        "ux",
+        "social",
+        "hooks",
+        "vent"
+      ]
+    }
+  ]
+}

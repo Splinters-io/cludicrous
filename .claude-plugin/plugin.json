@@ -1,0 +1,23 @@
+{
+  "name": "vent",
+  "version": "0.1.0",
+  "description": "If Anthropic won't hear it, send it to the internet #cludicrous. Prompts starting with vent: are caught locally, never sent to the model, redacted, and shared to X, Bluesky, Mastodon, LinkedIn, Facebook or GitHub.",
+  "author": {
+    "name": "carroll",
+    "email": "carroll@splinters.io"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cludicrous",
+    "feedback",
+    "hooks",
+    "social",
+    "ux",
+    "vent"
+  ],
+  "displayName": "Vent",
+  "homepage": "https://github.com/Splinters-io/cludicrous",
+  "repository": "https://github.com/Splinters-io/cludicrous",
+  "privacyPolicyUrl": "https://github.com/Splinters-io/cludicrous/blob/main/PRIVACY.md",
+  "supportUrl": "https://github.com/Splinters-io/cludicrous/issues"
+}
