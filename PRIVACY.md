@@ -20,7 +20,7 @@ Delete `~/.claude-vent/` at any time to remove all of it.
 ## What leaves your machine, and only when you run `vent send`
 - **X, Bluesky, Mastodon, LinkedIn:** your browser opens that site's compose page with the redacted text filled in. Nothing is posted until you press Post on the site.
 - **Facebook:** the redacted text is copied to your clipboard and Facebook opens in your browser. You paste it and post it yourself.
-- **GitHub:** an issue is created in the repository *you* set (`vent config github.repo`). It uses your own GitHub CLI login, or opens a pre-filled issue page in your browser. The issue includes the redacted text, your Claude Code version, your operating system and a timestamp.
+- **GitHub:** your browser opens a pre-filled new-issue page in the repository *you* set (`vent config github.repo`). Nothing is filed until you press Submit. Vent never uses your GitHub login or any other credential. The issue includes the redacted text, your Claude Code version, your operating system and a timestamp.
 
 Once something is posted, that platform's own privacy policy applies to it. Posts are public.
 

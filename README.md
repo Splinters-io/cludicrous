@@ -24,7 +24,7 @@ vent: this is the third time it deleted my fucking tests
 
 ```
 vent send x,bsky        # opens pre-filled compose windows, you press Post
-vent send gh            # files an issue in your configured repo
+vent send gh            # opens a pre-filled issue in your configured repo
 vent send all
 vent edit <new text>    # rewrite the draft
 vent show | vent cancel | vent help
@@ -36,14 +36,14 @@ vent show | vent cancel | vent help
 
 | Name | How |
 |---|---|
-| `gh` / `github` | `gh issue create` if the GitHub CLI is logged in, otherwise a pre-filled new-issue page. Runs first so other posts can link to it |
+| `gh` / `github` | Pre-filled new-issue page in your configured repo, which you submit yourself |
 | `x` / `twitter` | Pre-filled post page, trimmed to 280 characters |
 | `bsky` / `bluesky` | Pre-filled compose page, trimmed to 300 characters |
 | `mastodon` | `https://<instance>/share`, trimmed to 500 characters |
 | `linkedin` | Pre-filled feed share. The text is also copied to your clipboard |
 | `facebook` | Facebook doesn't allow pre-filled text, so the text is copied to your clipboard and Facebook is opened for you to paste it |
 
-Nothing is posted without you: social posts open in your browser for you to publish, and GitHub only files an issue when you run `vent send gh`.
+Nothing is posted without you: social posts open in your browser for you to publish, and that includes GitHub issues. Vent never reads or uses any of your credentials.
 
 ## Configure
 
@@ -76,7 +76,7 @@ Everything runs locally. There is no server, no analytics and no telemetry. Full
 | `vent: …`, `edit`, `show`, `cancel`, `config` | Writes to `~/.claude-vent/` | Nothing, and the prompt is not sent to Claude |
 | `vent send x/bsky/mastodon/linkedin` | `open` / `xdg-open` / `start` with the platform's share URL, and `pbcopy`/`xclip`/`clip` for LinkedIn | The redacted text, in a compose page you publish yourself |
 | `vent send facebook` | Clipboard copy, then opens facebook.com | Nothing until you paste and post it |
-| `vent send gh` | `gh auth status`, `gh issue create` in *your* configured repo (otherwise opens a pre-filled issue page), `claude --version` | The redacted text, your Claude Code version, OS and timestamp, as a GitHub issue |
+| `vent send gh` | `open` / `xdg-open` / `start` with a pre-filled new-issue URL for *your* configured repo, and `claude --version` | The redacted text, your Claude Code version, OS and timestamp, in an issue form you submit yourself |
 
 The plugin never reads your transcript, project files or Claude's replies, and it never changes Claude Code's settings or permissions.
 

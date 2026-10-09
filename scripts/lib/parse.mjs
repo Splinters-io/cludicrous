@@ -40,7 +40,7 @@ const ALIASES = {
   facebook: 'facebook', fb: 'facebook',
 };
 
-// Turn "x,bsky gh" into canonical names in send order (GitHub first so others can link to it).
+// Turn "x,bsky gh" into canonical names in send order (GitHub first).
 export function parseDestinations(args, defaults) {
   const raw = args.join(',').split(/[,\s]+/).map((s) => s.toLowerCase()).filter(Boolean);
   const wanted = new Set();

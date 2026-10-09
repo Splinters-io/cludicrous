@@ -82,33 +82,14 @@ export function copyToClipboard(text) {
   return false;
 }
 
-function ghReady() {
-  if (DRY_RUN()) return false;
-  const r = spawnSync('gh', ['auth', 'status'], { timeout: 5000 });
-  return r.status === 0;
-}
-
-function ghCreate(repo, title, body, withLabel) {
-  const args = ['issue', 'create', '-R', repo, '--title', title, '--body', body];
-  if (withLabel) args.push('--label', 'vent');
-  return spawnSync('gh', args, { encoding: 'utf8', timeout: 20000 });
-}
-
-// Returns { ok, line, url? } for each destination.
+// Returns { ok, line, url? } for each destination. GitHub opens a pre-filled issue page
+// rather than using the installer's gh credentials, so the user always submits it themselves.
 export function sendGithub(text, config) {
   const repo = config.github?.repo;
   if (!repo) {
     return { ok: false, line: 'GitHub: no repo set. Run `vent config github.repo <owner/repo>` first.' };
   }
-  const title = issueTitle(text);
-  const body = issueBody(text, config, collectMeta());
-  if (ghReady()) {
-    let r = ghCreate(repo, title, body, true);
-    if (r.status !== 0) r = ghCreate(repo, title, body, false); // label may not exist in the repo
-    const url = (r.stdout || '').trim().split('\n').pop();
-    if (r.status === 0 && /^https:\/\//.test(url)) return { ok: true, line: `GitHub: issue created → ${url}`, url };
-  }
-  const url = newIssueUrl(repo, title, body);
+  const url = newIssueUrl(repo, issueTitle(text), issueBody(text, config, collectMeta()));
   openUrl(url);
   return { ok: true, line: `GitHub: opened a pre-filled issue in ${repo} (press Submit to post)` };
 }
