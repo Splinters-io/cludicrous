@@ -1,4 +1,4 @@
-# Token-less Catharsism (`vent`), a Claude Code plugin
+# Token-less Catharsis (`vent`), a Claude Code plugin
 
 > **If Anthropic won't hear it, send it to the internet #cludicrous**
 
