@@ -1,7 +1,7 @@
 {
   "name": "vent",
-  "version": "0.1.0",
-  "description": "If Anthropic won't hear it, send it to the internet #cludicrous. Prompts starting with vent: are caught locally, never sent to the model, redacted, and shared to X, Bluesky, Mastodon, LinkedIn, Facebook or GitHub.",
+  "version": "0.1.1",
+  "description": "Token-less catharsism: vent about Claude Code in public, not at the model. Prompts starting with vent: or /vent are caught locally, never sent to the model, redacted, and shared to X, Bluesky, Mastodon, LinkedIn, Facebook or GitHub when you choose.",
   "author": {
     "name": "carroll",
     "email": "carroll@splinters.io"
@@ -15,7 +15,7 @@
     "ux",
     "vent"
   ],
-  "displayName": "Vent",
+  "displayName": "Token-less Catharsism",
   "homepage": "https://github.com/Splinters-io/cludicrous",
   "repository": "https://github.com/Splinters-io/cludicrous",
   "privacyPolicyUrl": "https://github.com/Splinters-io/cludicrous/blob/main/PRIVACY.md",

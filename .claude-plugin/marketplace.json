@@ -1,6 +1,6 @@
 {
   "name": "vent-plugins",
-  "description": "If Anthropic won't hear it, send it to the internet #cludicrous",
+  "description": "Token-less catharsism: vent about Claude Code in public, not at the model.",
   "owner": {
     "name": "carroll",
     "email": "carroll@splinters.io"
@@ -9,7 +9,7 @@
     {
       "name": "vent",
       "source": "./",
-      "description": "If Anthropic won't hear it, send it to the internet #cludicrous. Prompts starting with vent: are caught locally, never sent to the model, redacted, and shared to X, Bluesky, Mastodon, LinkedIn, Facebook or GitHub.",
+      "description": "Token-less catharsism: vent about Claude Code in public, not at the model. Prompts starting with vent: or /vent are caught locally, never sent to the model, redacted, and shared to X, Bluesky, Mastodon, LinkedIn, Facebook or GitHub when you choose.",
       "category": "productivity",
       "tags": [
         "feedback",
